@@ -34,6 +34,14 @@ public class Raccoon extends Pet implements Alive {
         }
     }
 
+    public void smells() {
+        if (isAlive) {
+            System.out.println("All ok!");
+        } else {
+            System.out.println("Raccoon " + name + " bad smells(");
+        }
+    }
+
     public String getName() {
         return name;
     }
