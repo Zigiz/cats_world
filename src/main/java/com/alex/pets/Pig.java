@@ -1,5 +1,7 @@
 package com.alex.pets;
 
+import com.alex.plants.Flower;
+
 public class Pig extends Pet implements Alive {
 
     private String name;
@@ -34,13 +36,23 @@ public class Pig extends Pet implements Alive {
         }
     }
 
+    public void eat(Flower flower) {
+        if (isAlive) {
+            System.out.println("Congratulations! " + getName() + " eat flower!");
+            flower.giveAura(this);
+        } else {
+            System.out.println("The dead do not eat");
+        }
+    }
 
     public String getName() {
         return name;
     }
+
     public String toString() {
         return "Pig " + name;
     }
+
     public String getBreed() {
         return breed;
     }
